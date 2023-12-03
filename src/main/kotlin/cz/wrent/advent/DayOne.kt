@@ -1,4 +1,4 @@
-package cz.wrent.advent.one
+package cz.wrent.advent
 
 fun main() {
     println(dayOnePartOne(input))

@@ -1,4 +1,4 @@
-package cz.wrent.advent.one
+package cz.wrent.advent
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
