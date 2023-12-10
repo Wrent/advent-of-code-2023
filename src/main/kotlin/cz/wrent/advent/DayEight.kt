@@ -70,7 +70,6 @@ fun dayEightPartTwo(input: String): Long {
         cnt
     }
     return nums.reduce { acc, l -> getLCM(acc, l) }
-    // findLCMOfListOfNumbers(nums)
 }
 
 fun getLCM(a: Long, b: Long): Long {
