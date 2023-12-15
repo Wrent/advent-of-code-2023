@@ -90,6 +90,10 @@ data class Position(val x: Int, val y: Int) {
     fun right(): Position = Position(x + 1, y)
     fun up(): Position = Position(x, y - 1)
     fun down(): Position = Position(x, y + 1)
+
+    fun distanceTo(position: Position): Int {
+        return (this.x - position.x).absoluteValue + (this.y - position.y).absoluteValue
+    }
 }
 
 private fun Map<Position, Char>.findNeighbours(position: Position): Set<Position> {
