@@ -76,7 +76,7 @@ private fun getPipeList(map: Map<Position, Char>): List<Position> {
     return pipe
 }
 
-private fun getMap(input: String): Map<Position, Char> {
+fun getMap(input: String): Map<Position, Char> {
     val map = input.split("\n").flatMapIndexed { y, line ->
         line.mapIndexed { x, c ->
             Position(x, y) to c
@@ -93,6 +93,15 @@ data class Position(val x: Int, val y: Int) {
 
     fun distanceTo(position: Position): Int {
         return (this.x - position.x).absoluteValue + (this.y - position.y).absoluteValue
+    }
+
+    fun direction(direction: Direction): Position {
+        return when(direction) {
+            Direction.N -> up()
+            Direction.W -> left()
+            Direction.S -> down()
+            Direction.E -> right()
+        }
     }
 }
 
